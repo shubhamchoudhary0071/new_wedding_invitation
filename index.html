@@ -6,7 +6,7 @@
 <title>Chitesh weds Aruna | #CA affair</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Montserrat:wght@300;400;500;600&family=Great+Vibes&family=Tiro+Devanagari+Sanskrit&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Montserrat:wght@300;400;500;600&family=Great+Vibes&family=Cinzel:wght@500;600;700&family=Tiro+Devanagari+Sanskrit&display=swap" rel="stylesheet">
 <style>
 :root{
   --ivory:#fdf9f0;
@@ -133,9 +133,8 @@ body.open #musicBtn{display:flex;}
   box-shadow:inset 0 0 30px rgba(184,146,62,.18);
   padding:20px;
 }
-.book-page .mono{font-family:'Great Vibes',cursive;font-size:58px;color:var(--gold);line-height:1;}
+.book-page .logo{width:72%;mix-blend-mode:multiply;filter:saturate(1.05);}
 .book-page .nm{font-family:'Playfair Display',serif;font-size:13px;letter-spacing:4px;text-transform:uppercase;color:var(--wine);}
-.book-page .tg{font-family:'Great Vibes',cursive;font-size:20px;color:var(--gold);}
 /* velvet cover */
 .book-cover{
   position:absolute;inset:0;border-radius:6px 14px 14px 6px;
@@ -193,19 +192,15 @@ body.open #musicBtn{display:flex;}
 }
 .invite-bg{
   position:absolute;inset:-8%;z-index:-2;
-  background:
-    radial-gradient(circle 240px at 50% 24%, rgba(217,188,116,.22) 0%, transparent 70%),
-    radial-gradient(ellipse 70% 45% at 8% 6%, rgba(140,44,64,.8) 0%, transparent 60%),
-    radial-gradient(ellipse 70% 45% at 92% 94%, rgba(140,44,64,.7) 0%, transparent 60%),
-    repeating-radial-gradient(circle at 50% -120%, transparent 0 46px, rgba(217,188,116,.05) 46px 48px),
-    repeating-radial-gradient(circle at 50% 220%, transparent 0 46px, rgba(217,188,116,.05) 46px 48px),
-    linear-gradient(170deg,var(--wine-dark) 0%,var(--wine) 45%,var(--wine-dark) 78%,var(--wine-deep) 100%);
+  background:url("WhatsApp%20Image%202026-11-25%20at%206.09.03%20PM.jpeg") center 70%/cover no-repeat;
+  filter:brightness(.82) saturate(1.05);
   animation:slowZoom 26s ease-in-out infinite alternate;
 }
 @keyframes slowZoom{from{transform:scale(1);}to{transform:scale(1.1);}}
 .invite-bg-tint{position:absolute;inset:0;z-index:-1;pointer-events:none;
   background:
-    radial-gradient(ellipse 120% 70% at 50% 50%, transparent 55%, rgba(62,15,26,.55) 100%);}
+    linear-gradient(180deg,rgba(62,15,26,.78) 0%,rgba(62,15,26,.45) 38%,rgba(62,15,26,.25) 62%,rgba(62,15,26,.8) 100%),
+    radial-gradient(ellipse 120% 70% at 50% 50%, transparent 55%, rgba(62,15,26,.45) 100%);}
 /* ornate gold frame around invitation */
 .inv-frame{
   position:absolute;inset:14px;z-index:0;pointer-events:none;
@@ -229,9 +224,14 @@ body.open #musicBtn{display:flex;}
 .inv-shloka{font-family:'Tiro Devanagari Sanskrit',serif;font-size:13px;color:var(--gold-pale);margin-top:10px;letter-spacing:1px;line-height:1.9;}
 .inv-together{font-size:12px;letter-spacing:5px;text-transform:uppercase;color:var(--gold-pale);margin-top:26px;font-weight:500;}
 .inv-name{
-  font-family:'Great Vibes',cursive;font-size:clamp(46px,12vw,72px);
-  color:#fff;line-height:1.15;min-height:1.2em;
-  text-shadow:0 3px 20px rgba(0,0,0,.55);
+  font-family:'Cinzel',serif;font-weight:600;
+  font-size:clamp(28px,7.4vw,44px);letter-spacing:4px;
+  line-height:1.3;min-height:1.35em;margin-top:14px;
+  color:#fdf6e8;
+  background:linear-gradient(180deg,#fdf3da 20%,var(--gold-light) 60%,#f3e2b4 100%);
+  -webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;
+  filter:drop-shadow(0 3px 14px rgba(0,0,0,.6));
 }
 .inv-name .cursor{display:inline-block;width:2px;height:.85em;background:var(--gold-light);vertical-align:-8%;margin-left:4px;animation:blink 1s steps(1) infinite;}
 @keyframes blink{50%{opacity:0;}}
@@ -364,6 +364,29 @@ body.open #musicBtn{display:flex;}
 .dots i.on{background:var(--wine);width:20px;border-radius:4px;}
 
 /* ============================================================
+   PHOTO QUOTE BAND
+============================================================ */
+.photo-band{
+  position:relative;min-height:58vh;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  background:url("WhatsApp%20Image%202026-11-25%20at%206.09.01%20PM.jpeg") center 58%/cover no-repeat;
+  padding:100px 26px;text-align:center;overflow:hidden;
+}
+.photo-band::before{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(62,15,26,.6) 0%,rgba(62,15,26,.22) 45%,rgba(62,15,26,.65) 100%);
+}
+.pb-quote{
+  position:relative;font-family:'Playfair Display',serif;font-style:italic;
+  color:#fdf6e8;font-size:clamp(20px,5.2vw,30px);max-width:620px;line-height:1.8;
+  text-shadow:0 3px 18px rgba(0,0,0,.55);
+}
+.pb-sub{
+  position:relative;margin-top:16px;font-size:11px;letter-spacing:4px;
+  text-transform:uppercase;color:var(--gold-pale);font-weight:600;
+}
+
+/* ============================================================
    PAGE 5 — OUR STORY GALLERY
 ============================================================ */
 #story{background:var(--ivory);padding-left:0;padding-right:0;}
@@ -387,16 +410,13 @@ body.open #musicBtn{display:flex;}
 }
 .gcard .imgwrap{
   border-radius:8px;overflow:hidden;
-  background:
-    radial-gradient(circle at 50% 40%, #fdf8ec 0%, #f3e8cf 100%);
-  display:flex;align-items:center;justify-content:center;
+  background:radial-gradient(circle at 50% 40%, #fdf8ec 0%, #f3e8cf 100%);
   height:min(96vw,380px);
   box-shadow:inset 0 0 18px rgba(140,108,38,.15);
 }
 .gcard img{
-  max-width:100%;max-height:100%;object-fit:contain;
-  filter:drop-shadow(0 8px 16px rgba(74,59,48,.3));
-  transition:transform .5s ease;
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .6s ease;
 }
 .gcard:hover img{transform:scale(1.03);}
 .gcard .cap{
@@ -511,6 +531,7 @@ body.open #musicBtn{display:flex;}
   padding-bottom:70px;
 }
 .close-om{font-size:40px;color:var(--gold);text-shadow:0 0 16px rgba(184,146,62,.5);}
+.close-logo{width:min(62vw,250px);margin-top:22px;mix-blend-mode:multiply;filter:saturate(1.05);}
 .close-big{
   font-family:'Playfair Display',serif;font-weight:700;
   font-size:clamp(26px,6.6vw,40px);color:var(--wine);
@@ -544,9 +565,8 @@ body.open #musicBtn{display:flex;}
     <div class="book" id="book">
       <div class="book-spine"></div>
       <div class="book-page">
-        <div class="mono">C♥A</div>
-        <div class="nm">Chitesh &amp; Aruna</div>
-        <div class="tg">#CA affair</div>
+        <img class="logo" src="WhatsApp%20Image%202026-11-25%20at%206.09.03%20PM%20(1).jpeg" alt="Chitesh weds Aruna — #CA affair">
+        <div class="nm">9 – 11 December 2026</div>
       </div>
       <div class="book-cover">
         <div class="cover-inner">
@@ -708,33 +728,39 @@ body.open #musicBtn{display:flex;}
   <div class="dots" id="fdots"></div>
 </section>
 
+<!-- ==================== PHOTO QUOTE BAND ==================== -->
+<div class="photo-band">
+  <div class="pb-quote rv">“And suddenly, all the love songs<br>were about you.”</div>
+  <div class="pb-sub rv dl1">Chitesh ♥ Aruna</div>
+</div>
+
 <!-- ==================== PAGE 5: OUR STORY ==================== -->
 <section id="story">
-  <div class="sec-label rv">Shagun</div>
-  <h2 class="sec-title rv dl1">The Invitation</h2>
+  <div class="sec-label rv">Our Story</div>
+  <h2 class="sec-title rv dl1">Moments of Us</h2>
   <div class="gold-divider rv dl1">❖</div>
-  <div class="swipe-hint rv dl2">← Swipe through the cards →</div>
+  <div class="swipe-hint rv dl2">← Swipe →</div>
 
   <div class="gal" id="gal">
     <div class="gcard">
-      <div class="imgwrap"><img src="WhatsApp%20Image%202026-11-24%20at%201.17.06%20PM.jpeg" alt="Invitation cover with CA monogram" loading="lazy"></div>
-      <div class="cap"><b>C ♥ A</b> — two letters, one promise.<span class="sm">The Cover</span></div>
+      <div class="imgwrap"><img src="WhatsApp%20Image%202026-11-25%20at%206.09.01%20PM.jpeg" alt="Chitesh and Aruna on a boat" loading="lazy"></div>
+      <div class="cap">Sailing into <b>forever</b>, together.<span class="sm">The Beginning</span></div>
     </div>
     <div class="gcard">
-      <div class="imgwrap"><img src="WhatsApp%20Image%202026-11-24%20at%201.17.06%20PM%20(2).jpeg" alt="Couple card" loading="lazy"></div>
-      <div class="cap">Where every glance says <b>forever</b>.<span class="sm">Chitesh &amp; Aruna</span></div>
+      <div class="imgwrap"><img src="WhatsApp%20Image%202026-11-25%20at%206.09.02%20PM.jpeg" alt="Golden hour in the mountains" loading="lazy"></div>
+      <div class="cap">In golden light, we found our <b>calm</b>.<span class="sm">Golden Hour</span></div>
     </div>
     <div class="gcard">
-      <div class="imgwrap"><img src="WhatsApp%20Image%202026-11-24%20at%201.17.05%20PM.jpeg" alt="Celebrations card" loading="lazy"></div>
-      <div class="cap">The music &amp; merriment begin.<span class="sm">Celebrations · 9 December</span></div>
+      <div class="imgwrap"><img src="WhatsApp%20Image%202026-11-25%20at%206.09.02%20PM%20(1).jpeg" alt="By the river" loading="lazy"></div>
+      <div class="cap">Standing at the edge of <b>forever</b>.<span class="sm">By the River</span></div>
     </div>
     <div class="gcard">
-      <div class="imgwrap"><img src="WhatsApp%20Image%202026-11-24%20at%201.17.05%20PM%20(1).jpeg" alt="Wedding day card" loading="lazy"></div>
-      <div class="cap">And then, <b>forever</b> begins.<span class="sm">Shubh Vivah · 11 December</span></div>
+      <div class="imgwrap"><img src="WhatsApp%20Image%202026-11-25%20at%206.09.02%20PM%20(2).jpeg" alt="The journey" loading="lazy"></div>
+      <div class="cap">Every path led us to <b>each other</b>.<span class="sm">The Journey</span></div>
     </div>
     <div class="gcard">
-      <div class="imgwrap"><img src="WhatsApp%20Image%202026-11-24%20at%201.17.06%20PM%20(1).jpeg" alt="Family card" loading="lazy"></div>
-      <div class="cap">With our families, with all our hearts.<span class="sm">Warm Regards</span></div>
+      <div class="imgwrap"><img src="WhatsApp%20Image%202026-11-25%20at%206.09.03%20PM.jpeg" alt="Sunset embrace" loading="lazy"></div>
+      <div class="cap">Two shadows, one <b>soul</b>.<span class="sm">Sunset Promise</span></div>
     </div>
   </div>
   <div class="dots" id="gdots"></div>
@@ -803,6 +829,7 @@ body.open #musicBtn{display:flex;}
     <span class="garland">🌼<br>🌼<br>🌼</span>
   </div>
   <div class="close-om rv">ॐ</div>
+  <img class="close-logo rv zoom dl1" src="WhatsApp%20Image%202026-11-25%20at%206.09.03%20PM%20(1).jpeg" alt="Chitesh weds Aruna — #CA affair">
   <div class="close-big rv dl1">WE CAN'T WAIT TO<br>CELEBRATE WITH YOU!</div>
   <div class="gold-divider rv dl2">❖</div>
   <div class="close-script rv dl2">With love &amp; blessings</div>
